@@ -389,8 +389,69 @@ body {
 
 /*-----------------------------------*\
   #HEADER
-\*-----------------------------------*/
+\*-----------------------------------*/ /* Default (desktop hero) – dark background */
+.logo-dark {
+  display: none;
+}
 
+.logo-light {
+  display: block;
+}
+
+/* When header scrolls (white background) */
+.header.active .logo-dark {
+  display: block;
+}
+
+.header.active .logo-light {
+  display: none;
+}
+
+/* MOBILE: header is ALWAYS white */
+@media (max-width: 768px) {
+  .logo-dark {
+    display: block;
+  }
+  .logo-light {
+    display: none !important;
+  }
+}
+/* Base — logo sizing */
+.header-logo {
+  height: 75px; /* increase size */
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* Desktop default:
+   Header is dark → show light logo */
+.logo-dark {
+  display: none;
+}
+.logo-light {
+  display: block;
+}
+
+/* When header becomes white on scroll */
+.header.active .logo-light {
+  display: none;
+}
+.header.active .logo-dark {
+  display: block;
+}
+
+/* ===== MOBILE & TABLET FIX ===== */
+/* On small screens (header always white):
+   always show dark logo, hide light logo */
+@media (max-width: 992px) {
+  .logo-light {
+    display: none !important;
+  }
+  .logo-dark {
+    display: block !important;
+  }
+}
 .header .btn {
   display: none;
 }
@@ -1774,5 +1835,36 @@ body {
 @media (min-width: 992px) {
   .pricing-grid {
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+/* Make logos bigger */
+.header-logo {
+  height: 75px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* Default state (top of page, transparent header) */
+.logo-dark {
+  display: none;
+}
+.logo-light {
+  display: block;
+}
+
+/* When header becomes sticky/white */
+.header.active .logo-dark {
+  display: block;
+}
+.header.active .logo-light {
+  display: none;
+}
+@media (max-width: 767px) {
+  .logo-dark {
+    display: block !important;
+  }
+  .logo-light {
+    display: none !important;
   }
 }
