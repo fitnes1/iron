@@ -498,17 +498,18 @@ body {
 \*-----------------------------------*/ /* Ensure the hero section is full viewport height */
 .hero {
   position: relative;
-  height: 100vh; /* full viewport height */
   display: flex;
   flex-direction: column;
   justify-content: flex-end; /* push content to bottom */
   overflow: hidden;
+  padding-block-start: calc(var(--section-padding) + 80px);
+  padding-block-end: 80px;
 }
 
 /* Position the hero-banner images at the bottom */
 .hero-banner {
   position: relative;
-  margin-bottom: -260px; /* optional tweak to bring it slightly lower */
+  margin-bottom: -80px; /* optional tweak to bring it slightly lower */
   display: flex;
   justify-content: center; /* center horizontally */
   align-items: flex-end; /* align children to bottom */
@@ -1416,7 +1417,7 @@ body {
   .hero .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    align-items: center;
+    align-items: end;
     gap: 25px;
   }
 
