@@ -495,14 +495,29 @@ body {
 
 /*-----------------------------------*\
   #HERO
-\*-----------------------------------*/
-
+\*-----------------------------------*/ /* Ensure the hero section is full viewport height */
 .hero {
-  color: var(--cadet-gray);
-  text-align: center;
-  padding-block-start: calc(var(--section-padding) + 80px);
-  padding-block-end: 0;
+  position: relative;
+  height: 100vh; /* full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* push content to bottom */
   overflow: hidden;
+}
+
+/* Position the hero-banner images at the bottom */
+.hero-banner {
+  position: relative;
+  margin-bottom: -260px; /* optional tweak to bring it slightly lower */
+  display: flex;
+  justify-content: center; /* center horizontally */
+  align-items: flex-end; /* align children to bottom */
+}
+
+/* Optional: adjust individual floating assets */
+.hero-banner .circle,
+.hero-banner .abs-img {
+  bottom: 0; /* anchor floating assets to the bottom */
 }
 
 .hero::after {
@@ -545,10 +560,6 @@ body {
 
 .hero .btn {
   margin-inline: auto;
-}
-
-.hero-banner {
-  position: relative;
 }
 
 .abs-img-1 {
