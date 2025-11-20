@@ -881,7 +881,6 @@ body {
 .blog-card .btn-link:is(:hover, :focus) {
   --color: var(--rich-black-fogra-29-1);
 }
-
 /*-----------------------------------*\
   #FOOTER
 \*-----------------------------------*/
@@ -1011,6 +1010,16 @@ body {
   color: var(--white);
   text-align: center;
   padding-block: 15px;
+  display: flex; /* added */
+  justify-content: center; /* added */
+  align-items: center; /* added */
+  gap: 15px; /* added spacing between text and links */
+  flex-wrap: wrap; /* optional for smaller screens */
+}
+
+.footer-bottom .copyright {
+  display: inline; /* ensure everything in one line */
+  white-space: nowrap; /* prevent breaking onto multiple lines */
 }
 
 .copyright-link {
@@ -1018,11 +1027,24 @@ body {
   color: var(--coquelicot);
 }
 
-.footer-bottom-list {
+.footer-bottom-inner {
   display: flex;
   justify-content: center;
+  align-items: center;
+  gap: 20px; /* space between copyright and links */
+  flex-wrap: wrap; /* optional: wraps on very small screens */
+}
+
+.footer-bottom .copyright {
+  margin: 0;
+  white-space: nowrap; /* keeps ©year Iron Arena on one line */
+}
+
+.footer-bottom-list {
+  display: flex;
   gap: 15px;
-  margin-block-start: 10px;
+  margin: 0;
+  padding: 0;
 }
 
 .footer-bottom-link {
