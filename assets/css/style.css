@@ -1867,4 +1867,148 @@ body {
   .logo-light {
     display: none !important;
   }
+} /* ---------------------------------------- */
+/* DESKTOP + GENERAL STYLES */
+/* ---------------------------------------- */
+
+/* Desktop/tablet footer button */
+.footer .btn.btn-primary {
+  padding: 12px 24px;
+  font-size: 15px;
+  display: inline-block;
+  text-align: center;
+}
+
+/* Header phone button (DESKTOP only) */
+.header .header-phone-btn {
+  background-color: #fd3c0b;
+  color: #fff;
+  padding: 12px 26px;
+  font-size: 15px;
+  border-radius: 6px;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header .header-phone-btn:hover {
+  background-color: #d83209;
+  color: #fff;
+}
+
+/* Hide menu phone button by default */
+.btn-phone-menu {
+  display: none;
+}
+
+/* ---------------------------------------- */
+/* TABLET (≤992px) */
+/* Show phone button next to burger menu */
+/* ---------------------------------------- */
+@media (max-width: 992px) {
+  /* Show red phone button in header */
+  .header-phone-btn {
+    display: inline-flex !important;
+    margin-right: 15px;
+  }
+
+  /* ALSO show the menu button inside burger menu */
+  .btn-phone-menu {
+    display: block !important;
+  }
+}
+
+/* ---------------------------------------- */
+/* MOBILE (≤600px) */
+/* Hide header button, show only inside the menu */
+/* ---------------------------------------- */
+@media (max-width: 600px) {
+  /* Hide top red header button */
+  .header-phone-btn {
+    display: none !important;
+  }
+
+  /* Button inside the burger menu */
+  .btn-phone-menu {
+    width: 100%;
+    background-color: #fff; /* white visible on orange background */
+    color: #141b22; /* dark text */
+    padding: 15px;
+    border-radius: 6px;
+    font-size: 16px;
+    text-align: center;
+    font-weight: 600;
+    border: none;
+    margin-top: 20px;
+  }
+
+  .btn-phone-menu:hover {
+    background-color: #141b22; /* dark background on hover */
+    color: #fff; /* white text */
+  }
+}
+/* ------------------------------------------------ */
+/* DESKTOP DEFAULT — ORANGE BUTTON                  */
+/* ------------------------------------------------ */
+
+.header .header-phone-btn {
+  background-color: #fd3c0b;
+  color: #fff;
+  padding: 12px 26px;
+  font-size: 15px;
+  border-radius: 6px;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header .header-phone-btn:hover {
+  background-color: #d83209;
+  color: #fff;
+}
+
+/* Hidden white button by default */
+.btn-phone-menu {
+  display: none;
+}
+
+/* ------------------------------------------------ */
+/* TABLET + PHONE (≤ 992px) — WHITE BUTTON VERSION  */
+/* ------------------------------------------------ */
+@media (max-width: 992px) {
+  /* Hide the desktop orange button */
+  .header-phone-btn {
+    display: none !important;
+  }
+
+  /* Show white button inside burger menu */
+  .btn-phone-menu {
+    display: block !important;
+    background-color: #fff;
+    color: #141b22;
+    padding: 14px 20px;
+    border-radius: 6px;
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    border: none;
+  }
+
+  .btn-phone-menu:hover {
+    background-color: #141b22;
+    color: #fff;
+  }
+}
+
+/* ------------------------------------------------ */
+/* PHONES ONLY (≤ 600px) — extra spacing            */
+/* ------------------------------------------------ */
+@media (max-width: 600px) {
+  .btn-phone-menu {
+    padding: 15px;
+    margin-top: 20px;
+  }
 }
