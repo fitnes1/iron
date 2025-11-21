@@ -282,7 +282,7 @@ body {
   left: 50%;
   transform: translate(-50%, -56%);
   width: 100%;
-  z-index: -1;
+  z-index: -2;
   animation: rotate360 15s linear infinite;
 }
 
@@ -297,6 +297,7 @@ body {
 
 .circle-2 {
   animation-direction: reverse;
+  z-index: -2;
 }
 
 .hero-subtitle,
@@ -2018,20 +2019,4 @@ body {
 .footer .logo img {
   max-width: 160px; /* намали ако е нужно: 120px, 140px и т.н. */
   height: auto;
-}
-/* Make the circle sit behind the content and show only 50% */
-.hero-banner .circle {
-  top: 60%; /* pushes the circle DOWN to show only half */
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 120%; /* slightly larger for the half-moon effect */
-  z-index: -2; /* behind everything */
-  opacity: 0.7; /* optional */
-}
-
-/* Reverse animation circle */
-.hero-banner .circle-2 {
-  top: 60%;
-  animation-direction: reverse;
-  z-index: -3; /* even further behind */
 }
