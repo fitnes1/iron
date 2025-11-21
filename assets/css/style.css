@@ -1209,15 +1209,6 @@ body {
   animation: bounce 2s infinite ease-in-out;
 }
 
-/* Use CSS content arrow and make it bulkier */
-.back-top-btn::before {
-  content: "↑"; /* Unicode arrow */
-  font-size: 2rem;
-  font-weight: 900; /* makes arrow thicker */
-  line-height: 1;
-  text-shadow: 0 0 1px var(--white), 0 0 1px var(--white); /* optional: subtle depth */
-}
-
 .back-top-btn.active {
   visibility: visible;
   opacity: 1;
@@ -2011,4 +2002,19 @@ body {
     padding: 15px;
     margin-top: 20px;
   }
+}
+.footer .footer-logo {
+  width: 160px;
+  height: auto;
+  display: block;
+}
+
+.footer .logo-light,
+.footer .logo-dark {
+  display: none !important;
+}
+/* Fix footer logo size */
+.footer .logo img {
+  max-width: 160px; /* намали ако е нужно: 120px, 140px и т.н. */
+  height: auto;
 }
