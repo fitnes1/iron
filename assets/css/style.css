@@ -1426,19 +1426,18 @@ body {
   }
 
   .header.active {
-    transform: translateY(-100%);
     background-color: var(--white);
     padding-block: 20px;
     box-shadow: var(--shadow-1);
     animation: slideIn 0.5s ease forwards;
+    transform: translateY(0); /* prevent jumping */
   }
-
   @keyframes slideIn {
     0% {
-      transform: translateY(-100%);
+      opacity: 0;
     }
     100% {
-      transform: translateY(0);
+      opacity: 1;
     }
   }
 
