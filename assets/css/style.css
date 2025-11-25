@@ -1892,7 +1892,7 @@ body {
   .partners-grid {
     gap: 60px;
   }
-  
+
   .partner-card {
     min-width: 220px;
     min-height: 120px;
@@ -2089,4 +2089,99 @@ body {
 .footer .logo img {
   max-width: 160px; /* намали ако е нужно: 120px, 140px и т.н. */
   height: auto;
+}
+
+.reviews-summary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-bottom: 2.5rem;
+  padding: 1.2rem 1.6rem;
+
+  background: var(--coquelicot_10);
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+
+  flex-wrap: wrap; /* ⚠️ Allows perfect mobile stacking */
+  text-align: center;
+}
+
+.reviews-stars {
+  display: flex;
+  gap: 4px;
+  font-size: 26px;
+  color: #f7b501;
+}
+
+.avg-rating {
+  font-size: 20px;
+  font-weight: 800;
+  margin: 0;
+  color: var(--rich-black-fogra-29-1);
+}
+
+.total-reviews {
+  font-size: 14px;
+  margin: 0;
+  color: var(--sonic-silver);
+}
+
+.star.half {
+  color: #d6d6d6;
+}
+
+/* =============================== */
+/* 📱 MOBILE OPTIMIZATION (0–480px) */
+/* =============================== */
+@media (max-width: 480px) {
+  .reviews-summary {
+    padding: 1.2rem;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .reviews-stars {
+    font-size: 24px;
+  }
+
+  .avg-rating {
+    font-size: 18px;
+  }
+}
+
+/* =================================== */
+/* 📱📱 SMALL TABLET (481–768px)       */
+/* =================================== */
+@media (max-width: 768px) {
+  .reviews-summary {
+    gap: 1rem;
+    padding: 1.4rem;
+  }
+
+  .reviews-stars {
+    font-size: 28px;
+  }
+
+  .avg-rating {
+    font-size: 22px;
+  }
+}
+
+/* =================================== */
+/* 💻 DESKTOP (1200px+)                */
+/* =================================== */
+@media (min-width: 1200px) {
+  .reviews-summary {
+    max-width: 550px; /* prevents stretching on huge screens */
+    margin: 0 auto 3rem auto;
+  }
+
+  .reviews-stars {
+    font-size: 32px;
+  }
+
+  .avg-rating {
+    font-size: 26px;
+  }
 }
