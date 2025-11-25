@@ -1941,22 +1941,24 @@ body {
   text-align: center;
 }
 
-/* Header phone button (DESKTOP only) */
+/* Header phone button (DESKTOP only) */ /* DESKTOP DEFAULT — WHITE BUTTON */
 .header .header-phone-btn {
-  background-color: #ec1f24;
-  color: #fff;
+  background-color: #ffffff; /* WHITE */
+  color: #141b22; /* DARK TEXT */
   padding: 12px 26px;
   font-size: 15px;
   border-radius: 6px;
-  border: none;
+  border: 2px solid #ffffff; /* keeps clean edges */
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  transition: 0.25s ease; /* smooth hover */
 }
 
+/* Hover effect */
 .header .header-phone-btn:hover {
-  background-color: #ec1f24;
-  color: #fff;
+  background-color: #141b22; /* dark */
+  color: #ffffff; /* white text */
 }
 
 /* Hide menu phone button by default */
@@ -2182,5 +2184,126 @@ body {
 
   .avg-rating {
     font-size: 26px;
+  }
+}
+
+/* FORCE DESKTOP PHONE BUTTON TO BE WHITE */
+.header .header-phone-btn {
+  background-color: #ffffff !important; /* WHITE */
+  color: #141b22 !important; /* DARK TEXT */
+  border: 2px solid #ffffff !important; /* clean border */
+}
+
+/* Hover (optional) */
+.header .header-phone-btn:hover {
+  background-color: #141b22 !important; /* dark */
+  color: #ffffff !important; /* white */
+}
+
+/* DEFAULT — transparent header → WHITE phone button */
+.header .header-phone-btn {
+  background-color: #ffffff !important;
+  color: #141b22 !important;
+  border: 2px solid #ffffff !important;
+  transition: 0.25s ease;
+}
+/* WHEN HEADER TURNS WHITE → RED phone button */
+.header.active .header-phone-btn {
+  background-color: #ec1f24 !important; /* red */
+  color: #ffffff !important; /* white text */
+  border-color: #ec1f24 !important;
+}
+/* === HERO SUBTITLE FIX === */
+
+/* Base for all devices */
+.hero-subtitle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+
+  background: rgba(255, 255, 255, 0.08);
+  padding: 8px 14px;
+  border-radius: 12px;
+
+  width: fit-content;
+  margin: 0 auto 20px auto;
+}
+
+.hero-subtitle .line {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.hero-subtitle .strong {
+  background-color: var(--coquelicot);
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 6px;
+  display: inline-block;
+  font-size: 1.4rem;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .hero-subtitle .line,
+  .hero-subtitle .strong {
+    font-size: 1.8rem;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1200px) {
+  .hero-subtitle .line,
+  .hero-subtitle .strong {
+    font-size: 2.2rem;
+  }
+}
+
+/* CENTER SUBTITLE ON MOBILE + TABLET ONLY */
+@media (max-width: 1199px) {
+  .hero-subtitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* center horizontally */
+    justify-content: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+  }
+
+  .hero-subtitle .line {
+    text-align: center;
+    width: 100%;
+  }
+
+  .hero-subtitle .strong {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+/* DESKTOP — restore original horizontal layout */
+@media (min-width: 1200px) {
+  .hero-subtitle {
+    flex-direction: row; /* side by side */
+    align-items: center;
+    justify-content: flex-start; /* align left like before */
+    gap: 12px; /* spacing between red block and text */
+
+    margin-left: 0; /* restore original alignment */
+    margin-right: 0;
+    text-align: left;
+  }
+
+  .hero-subtitle .line {
+    width: auto;
+    text-align: left;
+    display: inline-block;
+  }
+
+  .hero-subtitle .strong {
+    margin: 0;
   }
 }
