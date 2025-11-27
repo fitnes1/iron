@@ -1002,191 +1002,6 @@ body {
   --color: var(--rich-black-fogra-29-1);
 }
 /*-----------------------------------*\
-  #FOOTER
-\*-----------------------------------*/
-
-.footer {
-  font-size: var(--fs-6);
-}
-
-.footer-top .container {
-  display: grid;
-  gap: 50px;
-}
-
-.footer .logo {
-  color: var(--white);
-}
-
-.footer-brand-text {
-  margin-block: 25px;
-}
-
-.footer-top .wrapper {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 20px;
-}
-
-.footer-brand-list li:not(:last-child) {
-  margin-block-end: 15px;
-}
-
-.footer-brand-title,
-.footer-list-title {
-  color: var(--white);
-  font-family: var(--ff-catamaran);
-}
-
-.footer-list-title {
-  font-size: var(--fs-4);
-  font-weight: var(--fw-800);
-  margin-block-end: 28px;
-}
-
-.footer-list-title::before {
-  bottom: 0;
-  width: 70px;
-  height: 1px;
-  background-color: var(--coquelicot);
-}
-
-.footer-list > li:not(:first-child) {
-  margin-block-start: 12px;
-}
-
-.footer-link {
-  transition: var(--transition-1);
-}
-
-.footer-link:not(.address):is(:hover, :focus) {
-  color: var(--coquelicot);
-}
-
-.footer-list-item {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 20px;
-}
-
-.footer-list-item .icon {
-  background-color: var(--coquelicot);
-  color: var(--white);
-  font-size: 24px;
-  padding: 8px;
-  border-radius: 50px;
-}
-
-.footer-form {
-  position: relative;
-  margin-block-end: 30px;
-}
-
-.footer-form .input-field {
-  background-color: var(--white);
-  color: var(--rich-black-fogra-29-1);
-  padding-block: 18px;
-  padding-inline: 30px 80px;
-  border-radius: var(--radius-10);
-}
-
-.footer-form .btn {
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  bottom: 5px;
-  padding: 0;
-  font-size: 26px;
-  padding-inline: 12px;
-}
-
-.footer-form .btn-primary:is(:hover, :focus) {
-  background-color: var(--rich-black-fogra-29-1);
-  color: var(--white);
-  box-shadow: none;
-}
-
-.social-list {
-  display: flex;
-  gap: 15px;
-}
-
-.social-link {
-  background-color: var(--white_20);
-  color: var(--white);
-  padding: 13px;
-  border-radius: 50%;
-  transition: var(--transition-1);
-}
-
-.social-link:is(:hover, :focus) {
-  background-color: var(--coquelicot);
-}
-
-.footer-bottom {
-  background-color: var(--rich-black-fogra-29-2);
-  color: var(--white);
-  text-align: center;
-  padding-block: 15px;
-  display: flex; /* added */
-  justify-content: center; /* added */
-  align-items: center; /* added */
-  gap: 15px; /* added spacing between text and links */
-  flex-wrap: wrap; /* optional for smaller screens */
-}
-
-.footer-bottom .copyright {
-  display: inline; /* ensure everything in one line */
-  white-space: nowrap; /* prevent breaking onto multiple lines */
-}
-
-.copyright-link {
-  display: inline-block;
-  color: var(--coquelicot);
-}
-
-.footer-bottom-inner {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px; /* space between copyright and links */
-  flex-wrap: wrap; /* optional: wraps on very small screens */
-}
-
-.footer-bottom .copyright {
-  margin: 0;
-  white-space: nowrap; /* keeps ©year Iron Arena on one line */
-}
-
-.footer-bottom-list {
-  display: flex;
-  gap: 15px;
-  margin: 0;
-  padding: 0;
-}
-
-.footer-bottom-link {
-  padding-inline-start: 20px;
-  transition: var(--transition-1);
-}
-
-.footer-bottom-link::before {
-  top: 50%;
-  transform: translateY(-50%);
-  left: 0;
-  width: 10px;
-  height: 10px;
-  background-color: var(--coquelicot);
-  border-radius: 50%;
-}
-
-.footer-bottom-link:is(:hover, :focus) {
-  color: var(--coquelicot);
-}
-
-/*-----------------------------------*\
   #BACK TO TOP
 \*-----------------------------------*/
 
@@ -1322,15 +1137,6 @@ body {
   .video-card .card-title {
     --fs-3: 3.5rem;
   }
-
-  /**
-   * FOOTER
-   */
-
-  .footer-top .container {
-    grid-template-columns: 1fr 1fr;
-    column-gap: 25px;
-  }
 }
 
 /**
@@ -1374,20 +1180,6 @@ body {
   .abs-img-1 {
     top: 140px;
     right: 50px;
-  }
-
-  /**
-   * FOOTER
-   */
-
-  .footer-bottom .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .footer-bottom-list {
-    margin-block-start: 0;
   }
 }
 
@@ -1554,15 +1346,6 @@ body {
   .about .wrapper {
     gap: 30px;
   }
-
-  /**
-   * FOOTER
-   */
-
-  .footer-top .container {
-    grid-template-columns: 0.85fr 0.5fr 1fr 0.85fr;
-    column-gap: 50px;
-  }
 }
 
 /**
@@ -1667,14 +1450,6 @@ body {
 
   .blog-card .card-meta {
     padding: 15px 30px;
-  }
-
-  /**
-   * FOOTER
-   */
-
-  .footer-top .container {
-    grid-template-columns: 1fr 0.6fr 0.9fr 1fr;
   }
 }
 /* ===== FINAL CLEAN FIX FOR OFFERS ===== */
@@ -1933,14 +1708,6 @@ body {
 /* DESKTOP + GENERAL STYLES */
 /* ---------------------------------------- */
 
-/* Desktop/tablet footer button */
-.footer .btn.btn-primary {
-  padding: 12px 24px;
-  font-size: 15px;
-  display: inline-block;
-  text-align: center;
-}
-
 /* Header phone button (DESKTOP only) */ /* DESKTOP DEFAULT — WHITE BUTTON */
 .header .header-phone-btn {
   background-color: #ffffff; /* WHITE */
@@ -2075,21 +1842,6 @@ body {
     padding: 15px;
     margin-top: 20px;
   }
-}
-.footer .footer-logo {
-  width: 160px;
-  height: auto;
-  display: block;
-}
-
-.footer .logo-light,
-.footer .logo-dark {
-  display: none !important;
-}
-/* Fix footer logo size */
-.footer .logo img {
-  max-width: 160px; /* намали ако е нужно: 120px, 140px и т.н. */
-  height: auto;
 }
 
 .reviews-summary {
@@ -2306,4 +2058,165 @@ body {
   .hero-subtitle .strong {
     margin: 0;
   }
+}
+/* MASSAGES SECTION — uses same styling as ABOUT */
+.massages {
+  overflow: hidden;
+}
+
+.massages .section-subtitle {
+  background-color: var(--coquelicot_10);
+  color: var(--coquelicot);
+}
+
+.massages .wrapper {
+  margin-top: 30px;
+}
+.gallery-carousel {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: inline mandatory;
+  padding-block-end: 20px;
+}
+
+.gallery-carousel::-webkit-scrollbar {
+  height: 8px;
+}
+
+.gallery-carousel::-webkit-scrollbar-track {
+  background: var(--light-gray);
+  border-radius: 50px;
+}
+
+.gallery-carousel::-webkit-scrollbar-thumb {
+  background: var(--coquelicot);
+  border-radius: 50px;
+}
+
+.scrollbar-item {
+  min-width: 500px;
+  scroll-snap-align: start;
+}
+
+.gallery-img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.massages .wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.massages .about-coach {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 0; /* remove extra spacing */
+}
+
+.massages .btn-primary {
+  margin-top: 0; /* remove top spacing */
+}
+
+.massage-call-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+  align-items: center;
+}
+
+.massage-call-buttons .btn-primary {
+  width: 260px; /* button width */
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 15px 20px;
+  border-radius: 10px;
+} /* ================================
+   CLEAN MINIMAL FOOTER STYLES
+   ================================ */
+
+.footer {
+  background-color: var(--rich-black-fogra-29-1);
+  color: #ccc;
+}
+
+/* MOBILE + TABLET (default) — everything centered */
+.footer-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  padding: 50px 0;
+  text-align: center;
+  align-items: center;
+}
+
+.footer-left,
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+/* Logo */
+.footer-logo-wrap img {
+  width: 150px;
+  height: auto;
+}
+
+.footer-text,
+.footer-link,
+address {
+  color: #ccc;
+  font-size: 16px;
+}
+
+/* Hours & items */
+.footer-hours,
+.footer-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.footer-hours ion-icon,
+.footer-item ion-icon {
+  font-size: 22px;
+  color: var(--coquelicot);
+}
+
+/* Socials */
+.footer-socials {
+  display: flex;
+  gap: 22px;
+  justify-content: center;
+}
+
+footer .container {
+  max-width: 100% !important;
+}
+.footer-bottom {
+  background-color: var(--rich-black-fogra-29-2);
+  padding: 12px 0;
+  text-align: center;
+}
+.footer-bottom-inner {
+  display: flex;
+  justify-content: center;
+  white-space: nowrap !important;
+}
+.footer-copy {
+  white-space: nowrap !important;
+  margin: 0 !important;
+  display: inline-block !important;
+  text-align: center;
+  width: 100%;
 }

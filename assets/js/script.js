@@ -52,7 +52,9 @@ window.addEventListener("scroll", function () {
 });
 
 const year = new Date().getFullYear();
-const yearElem = document.getElementById("year");
-if (yearElem) {
-  yearElem.textContent = year;
+const copyrightElem = document.getElementById("copyright");
+
+if (copyrightElem) {
+  copyrightElem.textContent = `© ${year} Iron Arena. Всички права запазени.`;
+  copyrightElem.style.whiteSpace = "nowrap";
 }
