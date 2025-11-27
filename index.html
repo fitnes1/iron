@@ -1,125 +1,248 @@
 <!DOCTYPE html>
 <html lang="bg">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Iron Arena - Тренирай Упорито, Промени Живота Си</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Iron Arena - Тренирай Упорито, Промени Живота Си</title>
+    <!-- favicon -->
+    <link
+      rel="shortcut icon"
+      href="./assets/images/favi.png"
+      type="image/svg+xml"
+    />
 
-  <!-- favicon -->
-  <link rel="shortcut icon" href="./assets/images/favi.png" type="image/svg+xml">
+    <!-- custom css link -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
 
-  <!-- custom css link -->
-  <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Catamaran:wght@600;700;800;900&family=Rubik:wght@400;500;800&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- google font link -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@600;700;800;900&family=Rubik:wght@400;500;800&display=swap" rel="stylesheet">
+    <!-- preload images -->
+    <link rel="preload" as="image" href="./assets/images/hero-banner.png" />
+    <link rel="preload" as="image" href="./assets/images/hero-circle-one.png" />
+    <link rel="preload" as="image" href="./assets/images/hero-circle-two.png" />
+    <link rel="preload" as="image" href="./assets/images/heart-rate.svg" />
+    <link rel="preload" as="image" href="./assets/images/calories.svg" />
+  </head>
 
-  <!-- preload images -->
-  <link rel="preload" as="image" href="./assets/images/hero-banner.png">
-  <link rel="preload" as="image" href="./assets/images/hero-circle-one.png">
-  <link rel="preload" as="image" href="./assets/images/hero-circle-two.png">
-  <link rel="preload" as="image" href="./assets/images/heart-rate.svg">
-  <link rel="preload" as="image" href="./assets/images/calories.svg">
-</head>
+  <body id="top">
+    <!-- #HEADER -->
+    <header class="header" data-header>
+      <div class="container">
+        <a href="#" class="logo">
+          <img
+            src="./assets/images/logo2.png"
+            class="header-logo logo-dark"
+            alt="Iron Arena Лого Тъмно"
+          />
+          <img
+            src="./assets/images/logo1.png"
+            class="header-logo logo-light"
+            alt="Iron Arena Лого Светло"
+          />
+        </a>
+        <nav class="navbar" data-navbar>
+          <button
+            class="nav-close-btn"
+            aria-label="затвори меню"
+            data-nav-toggler
+          >
+            <ion-icon name="close-sharp" aria-hidden="true"></ion-icon>
+          </button>
 
-<body id="top">
+          <ul class="navbar-list">
+            <li>
+              <a href="#offers" class="navbar-link" data-nav-link
+                >Последни оферти</a
+              >
+            </li>
+            <li>
+              <a href="#reviews" class="navbar-link" data-nav-link>Ревюта</a>
+            </li>
+            <li>
+              <a href="#pricing" class="navbar-link" data-nav-link
+                >Ценоразпис</a
+              >
+            </li>
+            <li>
+              <a href="#partners" class="navbar-link" data-nav-link
+                >Партньори</a
+              >
+            </li>
+            <li>
+              <a href="#gallery" class="navbar-link" data-nav-link>Галерия</a>
+            </li>
+            <li>
+              <a href="#location" class="navbar-link" data-nav-link>Локация</a>
+            </li>
+            <li>
+              <a href="tel:+359888123456" class="btn-phone-menu">Обади се</a>
+            </li>
+          </ul>
+        </nav>
 
-  <!-- #HEADER -->
-  <header class="header" data-header>
-    <div class="container">
-
-      <a href="#" class="logo">
-        <img src="./assets/images/logo2.png" class="header-logo logo-dark" alt="Iron Arena Лого Тъмно">
-        <img src="./assets/images/logo1.png" class="header-logo logo-light" alt="Iron Arena Лого Светло">
-      </a>
-      <nav class="navbar" data-navbar>
-        <button class="nav-close-btn" aria-label="затвори меню" data-nav-toggler>
-          <ion-icon name="close-sharp" aria-hidden="true"></ion-icon>
-        </button>
-      
-        <ul class="navbar-list">
-          <li><a href="#offers" class="navbar-link" data-nav-link>Последни оферти</a></li>
-          <li><a href="#reviews" class="navbar-link" data-nav-link>Ревюта</a></li>
-          <li><a href="#pricing" class="navbar-link" data-nav-link>Ценоразпис</a></li>
-          <li><a href="#partners" class="navbar-link" data-nav-link>Партньори</a></li>
-          <li><a href="#gallery" class="navbar-link" data-nav-link>Галерия</a></li>
-          <li><a href="#location" class="navbar-link" data-nav-link>Локация</a></li>
-          <li>
-            <a href="tel:+359888123456" class="btn-phone-menu">Обади се</a>
-          </li>
-        </ul>
-      </nav>
-
-      <div>
-        <a href="tel:+359888123456" class="btn header-phone-btn">888123456</a>  
-       </div>
-
-      <button class="nav-open-btn" aria-label="отворено меню" data-nav-toggler>
-        <span class="line"></span>
-        <span class="line"></span>
-        <span class="line"></span>
-      </button>
-
-    </div>
-  </header>
-
-  <main>
-    <article>
-
-      <!-- #HERO -->
-      <section class="section hero bg-dark has-after has-bg-image" id="home" aria-label="hero" data-section
-        style="background-image: url('./assets/images/hero-bg.png')">
-        <div class="container">
-
-          <div class="hero-content">
-            <p class="hero-subtitle">
-              <span class="line"><strong class="strong">Най-добрият</strong></span>
-              <span class="line">Фитнес Клуб</span>
-            </p>
-
-            <h1 class="h1 hero-title">Тренирай Упорито, Промени Живота Си</h1>
-
-            <p class="section-text">
-              Iron Arena предлага индивидуални програми, модерни уреди и професионални треньори, за да постигнеш целите си бързо и безопасно.
-            </p>
-
-            <a href="https://maps.app.goo.gl/HFSpDBewq7bdic2o6" target="_blank" class="btn btn-primary">Започни сега</a>          </div>
-
-          <div class="hero-banner">
-            <img src="./assets/images/hero-banner.png" width="660" height="753" alt="hero banner" class="w-100">
-            <img src="./assets/images/hero-circle-one.png" width="666" height="666" aria-hidden="true" alt="" class="circle circle-1">
-            <img src="./assets/images/hero-circle-two.png" width="666" height="666" aria-hidden="true" alt="" class="circle circle-2">
-            <img src="./assets/images/heart-rate.svg" width="255" height="270" alt="heart rate" class="abs-img abs-img-1">
-            <img src="./assets/images/calories.svg" width="348" height="224" alt="calories" class="abs-img abs-img-2">
-          </div>
-
+        <div>
+          <a href="tel:+359888123456" class="btn header-phone-btn">888123456</a>
         </div>
-      </section>
+
+        <button
+          class="nav-open-btn"
+          aria-label="отворено меню"
+          data-nav-toggler
+        >
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <article>
+        <!-- #HERO -->
+        <section
+          class="section hero bg-dark has-after has-bg-image"
+          id="home"
+          aria-label="hero"
+          data-section
+          style="background-image: url('./assets/images/hero-bg.png')"
+        >
+          <div class="container">
+            <div class="hero-content">
+              <p class="hero-subtitle">
+                <span class="line"
+                  ><strong class="strong">Най-добрият</strong></span
+                >
+                <span class="line">Фитнес Клуб</span>
+              </p>
+
+              <h1 class="h1 hero-title">Тренирай Упорито, Промени Живота Си</h1>
+
+              <p class="section-text">
+                Iron Arena предлага индивидуални програми, модерни уреди и
+                професионални треньори, за да постигнеш целите си бързо и
+                безопасно.
+              </p>
+
+              <a
+                href="https://maps.app.goo.gl/HFSpDBewq7bdic2o6"
+                target="_blank"
+                class="btn btn-primary"
+                >Започни сега</a
+              >
+            </div>
+
+            <div class="hero-banner">
+              <img
+                src="./assets/images/hero-banner.png"
+                width="660"
+                height="753"
+                alt="hero banner"
+                class="w-100"
+              />
+              <img
+                src="./assets/images/hero-circle-one.png"
+                width="666"
+                height="666"
+                aria-hidden="true"
+                alt=""
+                class="circle circle-1"
+              />
+              <img
+                src="./assets/images/hero-circle-two.png"
+                width="666"
+                height="666"
+                aria-hidden="true"
+                alt=""
+                class="circle circle-2"
+              />
+              <img
+                src="./assets/images/heart-rate.svg"
+                width="255"
+                height="270"
+                alt="heart rate"
+                class="abs-img abs-img-1"
+              />
+              <img
+                src="./assets/images/calories.svg"
+                width="348"
+                height="224"
+                alt="calories"
+                class="abs-img abs-img-2"
+              />
+            </div>
+          </div>
+        </section>
 
         <!-- #ABOUT -->
         <section class="section about" id="about" aria-label="about">
           <div class="container">
             <div class="about-banner has-after">
-              <img src="./assets/images/about-banner.png" width="660" height="648" loading="lazy" alt="about banner" class="w-100">
-              <img src="./assets/images/about-circle-one.png" width="660" height="534" loading="lazy" aria-hidden="true" alt="" class="circle circle-1">
-              <img src="./assets/images/about-circle-two.png" width="660" height="534" loading="lazy" aria-hidden="true" alt="" class="circle circle-2">
-              <img src="./assets/images/fitness.png" width="650" height="154" loading="lazy" alt="fitness" class="abs-img w-100">
+              <img
+                src="./assets/images/about-banner.png"
+                width="660"
+                height="648"
+                loading="lazy"
+                alt="about banner"
+                class="w-100"
+              />
+              <img
+                src="./assets/images/about-circle-one.png"
+                width="660"
+                height="534"
+                loading="lazy"
+                aria-hidden="true"
+                alt=""
+                class="circle circle-1"
+              />
+              <img
+                src="./assets/images/about-circle-two.png"
+                width="660"
+                height="534"
+                loading="lazy"
+                aria-hidden="true"
+                alt=""
+                class="circle circle-2"
+              />
+              <img
+                src="./assets/images/fitness.png"
+                width="650"
+                height="154"
+                loading="lazy"
+                alt="fitness"
+                class="abs-img w-100"
+              />
             </div>
-  
+
             <div class="about-content">
               <p class="section-subtitle">За нас</p>
               <h2 class="h2 section-title">Добре дошли в Iron Arena</h2>
-              <p class="section-text">Нашият фитнес център предлага индивидуални и групови тренировки с професионални треньори и модерни уреди.</p>
-              <p class="section-text">Целта ни е да ви помогнем да постигнете форма, сила и здраве по най-безопасния и ефективен начин.</p>
-  
+              <p class="section-text">
+                Нашият фитнес център предлага индивидуални и групови тренировки
+                с професионални треньори и модерни уреди.
+              </p>
+              <p class="section-text">
+                Целта ни е да ви помогнем да постигнете форма, сила и здраве по
+                най-безопасния и ефективен начин.
+              </p>
+
               <div class="wrapper">
                 <div class="about-coach">
                   <figure class="coach-avatar">
-                    <img src="./assets/images/about-coach.jpg" width="65" height="65" loading="lazy" alt="Треньор">
+                    <img
+                      src="./assets/images/about-coach.jpg"
+                      width="65"
+                      height="65"
+                      loading="lazy"
+                      alt="Треньор"
+                    />
                   </figure>
                   <div>
                     <h3 class="h3 coach-name">Денис Робинсон</h3>
@@ -132,391 +255,735 @@
           </div>
         </section>
 
-<!-- #MASSAGES -->
-<section class="section massages" id="massages" aria-label="massages">
-  <div class="container">
-    
-    <div class="about-banner has-after">
-      <!-- reuse existing working images -->
-      <img src="./assets/images/massage-therapy-guide-1440x810.jpg.webp" width="660" height="648" loading="lazy" alt="massage banner" class="w-100">
-    </div>
-
-    <div class="about-content">
-
-      <h2 class="h2 section-title">Професионални Масажи в Iron Arena</h2>
-
-      <p class="section-text">
-        Погрижи се за тялото си с нашите професионални масажисти. Предлагаме възстановяващи, релаксиращи и спортни масажи.
-      </p>
-
-      <p class="section-text">
-        Перфектно допълнение към тренировките — за отпускане, възстановяване и по-добър спортен прогрес.
-      </p>
-
-      <div class="wrapper">
-        <div class="about-coach">
-          <div>
-            <h3 class="h3 coach-name">Петя Мартинова</h3>
-            <p class="coach-title">Професионален масажист</p>
-          </div>
-        </div>
-
-        <a href="#massage-pricing" class="btn btn-primary">Виж Цени</a>
-      </div>
-
-    </div>
-  </div>
-</section>
-      <!-- #OFFERS -->
-      <section class="section offers" id="offers" aria-label="offers">
-        <div class="container">
-          <p class="section-subtitle">Специални предложения</p>
-          <h2 class="h2 section-title text-center">Последни оферти</h2>
-
-          <ul class="class-list has-scrollbar">
-            <li class="scrollbar-item">
-              <div class="class-card">
-                <figure class="card-banner img-holder" style="--width:416; --height:240;">
-                  <img src="./assets/images/class-1.jpg" width="416" height="240" loading="lazy" alt="Оферта 1" class="img-cover">
-                </figure>
-                <div class="card-content">
-                  <h3 class="h3 card-title">Абонамент 1 месец</h3>
-                  <p class="card-text">Достъп до всички фитнес уреди и групови тренировки за 1 месец.</p>
-                  <p class="card-text"><strong>Цена:</strong> 80 лв.</p>
-                </div>
-              </div>
-            </li>
-            <li class="scrollbar-item">
-              <div class="class-card">
-                <figure class="card-banner img-holder" style="--width:416; --height:240;">
-                  <img src="./assets/images/class-2.jpg" width="416" height="240" loading="lazy" alt="Оферта 2" class="img-cover">
-                </figure>
-                <div class="card-content">
-                  <h3 class="h3 card-title">Абонамент 3 месеца</h3>
-                  <p class="card-text">Комплексна програма с треньор и достъп до всички класове.</p>
-                  <p class="card-text"><strong>Цена:</strong> 220 лв.</p>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- #REVIEWS -->
-      <section class="section reviews" id="reviews" aria-label="reviews">
-        <div class="container">
-          <p class="section-subtitle">Клиентски мнения</p>
-          <h2 class="h2 section-title text-center">Ревюта</h2>
-<!-- Reviews Summary --><a href="https://www.google.com/maps/place/%D0%A4%D0%B8%D1%82%D0%BD%D0%B5%D1%81+%D0%A6%D0%B5%D0%BD%D1%82%D1%8A%D1%80+%22Iron+Arena%22/@42.7188487,23.2408991,16.16z/data=!4m6!3m5!1s0x40aa9b2883b49963:0x75858dd482da9c91!8m2!3d42.7167608!4d23.2440064!16s%2Fg%2F11h1jt6bq4?entry=ttu&g_ep=EgoyMDI1MTExNy4wIKXMDSoASAFQAw%3D%3D" 
-   class="reviews-link" 
-   target="_blank" 
-   rel="noopener noreferrer">
-
-  <div class="reviews-summary">
-    <div class="reviews-stars">
-      <span class="star">★</span>
-      <span class="star">★</span>
-      <span class="star">★</span>
-      <span class="star">★</span>
-      <span class="star half">★</span>
-    </div>
-
-    <div class="reviews-info">
-      <p class="avg-rating">4.8 от 5</p>
-      <p class="total-reviews">Базирано на 64 ревюта</p>
-    </div>
-  </div>
-
-</a>
-<ul class="blog-list has-scrollbar">
-  <li class="scrollbar-item">
-    <div class="blog-card">
-      <div class="card-content">
-        <p class="card-text">„Малка квартална зала с всичко необходимо за здрава тренировка. Персоналът и хората са готини, никога няма навалица. Голям плюс за прозорците и свежия въздух, което в много други зали липсва 👍 :)…“</p>
-        <p class="card-text"><strong>- Y D</strong></p>
-      </div>
-    </div>
-  </li>
-
-  <li class="scrollbar-item">
-    <div class="blog-card">
-      <div class="card-content">
-        <p class="card-text">„Супер фитнес! Малка и приятна зала, която е добре поддържана. Има всякакви уреди нужни за една тренировка. Персоналът е отличен и цените са перфектни. Силно препоръчвам!“</p>
-        <p class="card-text"><strong>- Ivaka</strong></p>
-      </div>
-    </div>
-  </li>
-
-  <li class="scrollbar-item">
-    <div class="blog-card">
-      <div class="card-content">
-        <p class="card-text">„Много добре селектиран бар с добавки и инструкторката е про“</p>
-        <p class="card-text"><strong>- Ivo Mladhzov</strong></p>
-      </div>
-    </div>
-  </li>
-
-  <li class="scrollbar-item">
-    <div class="blog-card">
-      <div class="card-content">
-        <p class="card-text">„Малка зала, но поддържана. Персоналът е много готин!“</p>
-        <p class="card-text"><strong>- Lia Georgieva</strong></p>
-      </div>
-    </div>
-  </li>
-</ul>
-          </ul>
-        </div>
-      </section>
-
-      <!-- #PRICING -->
-      <section class="section pricing" id="pricing" aria-label="pricing">
-        <div class="container">
-          <p class="section-subtitle">Фитнес</p>
-          <h2 class="h2 section-title text-center">Цени на абонаментите</h2>
-      
-          <ul class="pricing-grid">
-      
-            <li>
-              <div class="class-card">
-                <div class="card-content">
-                  <h3 class="h3 card-title">Месечен абонамент</h3>
-                  <p class="card-text">80 лв.</p>
-                </div>
-              </div>
-            </li>
-      
-            <li>
-              <div class="class-card">
-                <div class="card-content">
-                  <h3 class="h3 card-title">3 месеца</h3>
-                  <p class="card-text">220 лв.</p>
-                </div>
-              </div>
-            </li>
-      
-            <li>
-              <div class="class-card">
-                <div class="card-content">
-                  <h3 class="h3 card-title">6 месеца</h3>
-                  <p class="card-text">400 лв.</p>
-                </div>
-              </div>
-            </li>
-      
-            <li>
-              <div class="class-card">
-                <div class="card-content">
-                  <h3 class="h3 card-title">12 месеца</h3>
-                  <p class="card-text">750 лв.</p>
-                </div>
-              </div>
-            </li>
-      
-          </ul>
-        </div>
-      </section>
-      <section class="section pricing" id="massage-pricing" aria-label="massage pricing">
-        <div class="container">
-          <p class="section-subtitle">Масажи</p>
-          <h2 class="h2 section-title text-center">Ценоразпис на масажи</h2>
-      
-          <ul class="pricing-grid">
-      
-            <li><div class="class-card"><div class="card-content"><h3 class="h3 card-title">Масаж на лице и скалп</h3><p class="card-text">40 мин / 50 лв. / €25,57</p></div></div></li>
-      
-            <li><div class="class-card"><div class="card-content"><h3 class="h3 card-title">Терапия с вендузи</h3><p class="card-text">30 мин / 45 лв. / €23,01</p></div></div></li>
-      
-            <li><div class="class-card"><div class="card-content"><h3 class="h3 card-title">Класически масаж</h3><p class="card-text">30 мин / 60 лв. / €30,68</p></div></div></li>
-      
-            <li><div class="class-card"><div class="card-content"><h3 class="h3 card-title">Класически масаж</h3><p class="card-text">60 мин / 80 лв. / €40,91</p></div></div></li>
-      
-            <li><div class="class-card"><div class="card-content"><h3 class="h3 card-title">Релаксиращ масаж</h3><p class="card-text">30 мин / 60 лв. / €30,68</p></div></div></li>
-      
-            <li><div class="class-card"><div class="card-content"><h3 class="h3 card-title">Релаксиращ масаж</h3><p class="card-text">60 мин / 80 лв. / €40,91</p></div></div></li>
-      
-            <li><div class="class-card"><div class="card-content"><h3 class="h3 card-title">Лечебен масаж</h3><p class="card-text">30 мин / 60 лв. / €30,68</p></div></div></li>
-      
-            <li><div class="class-card"><div class="card-content"><h3 class="h3 card-title">Лечебен масаж</h3><p class="card-text">60 мин / 80 лв. / €40,91</p></div></div></li>
-      
-            <li><div class="class-card"><div class="card-content"><h3 class="h3 card-title">Дълбокотъканен масаж</h3><p class="card-text">30 мин / 65 лв. / €33,24</p></div></div></li>
-      
-            <li><div class="class-card"><div class="card-content"><h3 class="h3 card-title">Дълбокотъканен масаж</h3><p class="card-text">60 мин / 90 лв. / €46,02</p></div></div></li>
-      
-            <li><div class="class-card"><div class="card-content"><h3 class="h3 card-title">Комбинирана терапия</h3><p class="card-text">60 мин / 80 лв. / €40,91</p></div></div></li>
-      
-            <li><div class="class-card"><div class="card-content"><h3 class="h3 card-title">Антицелулитен масаж</h3><p class="card-text">40 мин / 60 лв. / €30,68</p></div></div></li>
-      
-            <li><div class="class-card"><div class="card-content"><h3 class="h3 card-title">Вендузи към масаж</h3><p class="card-text">20 лв. / €10,23</p></div></div></li>
-      
-            <li><div class="class-card"><div class="card-content"><h3 class="h3 card-title">Масаж на ходила</h3><p class="card-text">20 мин / 40 лв. / €20,45</p></div></div></li>
-      
-          </ul>
-      
-          <h3 class="h3 text-center" style="margin-top:40px;">Запази час</h3>
-          <div class="massage-call-buttons">
-            <a href="tel:+359892911386" class="btn btn-primary">📞 +359 892 911 386</a>
-            <a href="tel:+359878516689" class="btn btn-primary">📞 +359 878 516 689</a>
-          </div>
-      
-        </div>
-      </section>
-
-      <!-- #PARTNERS -->
-      <section class="section partners" id="partners" aria-label="partners" style="background-image: url('./assets/images/footer-bg.png')">
-        <div class="container">
-          <p class="section-subtitle">Партньори</p>
-          <h2 class="h2 section-title text-center">Тренирайте с картата си</h2>
-          
-          <div class="partners-grid">
-            <div class="partner-card">
-              <div class="partner-logo">
-                <img src="./assets/images/coolfit-logo.png" width="200" alt="CoolFit Logo" loading="lazy">
-              </div>
+        <!-- #MASSAGES -->
+        <section class="section massages" id="massages" aria-label="massages">
+          <div class="container">
+            <div class="about-banner has-after">
+              <!-- reuse existing working images -->
+              <img
+                src="./assets/images/massage-therapy-guide-1440x810.jpg.webp"
+                width="660"
+                height="648"
+                loading="lazy"
+                alt="massage banner"
+                class="w-100"
+              />
             </div>
-            <div class="partner-card">
-              <div class="partner-logo">
-                <img src="./assets/images/multisport-logo.png" width="200" alt="MultiSport" loading="lazy">
+
+            <div class="about-content">
+              <h2 class="h2 section-title">
+                Професионални Масажи в Iron Arena
+              </h2>
+
+              <p class="section-text">
+                Погрижи се за тялото си с нашите професионални масажисти.
+                Предлагаме възстановяващи, релаксиращи и спортни масажи.
+              </p>
+
+              <p class="section-text">
+                Перфектно допълнение към тренировките — за отпускане,
+                възстановяване и по-добър спортен прогрес.
+              </p>
+
+              <div class="wrapper">
+                <div class="about-coach">
+                  <div>
+                    <h3 class="h3 coach-name">Петя Мартинова</h3>
+                    <p class="coach-title">Професионален масажист</p>
+                  </div>
+                </div>
+
+                <a href="#massage-pricing" class="btn btn-primary">Виж Цени</a>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+        <!-- #OFFERS -->
+        <section class="section offers" id="offers" aria-label="offers">
+          <div class="container">
+            <p class="section-subtitle">Специални предложения</p>
+            <h2 class="h2 section-title text-start">Последни оферти</h2>
 
-      <!-- #GALLERY -->
-      <section class="section gallery" id="gallery" aria-label="gallery">
-        <div class="container">
-          <p class="section-subtitle">Галерия</p>
-          <h2 class="h2 section-title text-center">Нашата зала</h2>
-      
-          <ul class="gallery-carousel has-scrollbar">
-            <li class="scrollbar-item"><img src="./assets/fitnes_images/1.jpg" class="gallery-img" alt=""></li>
-            <li class="scrollbar-item"><img src="./assets/fitnes_images/2.jpg" class="gallery-img" alt=""></li>
-            <li class="scrollbar-item"><img src="./assets/fitnes_images/3.jpg" class="gallery-img" alt=""></li>
-            <li class="scrollbar-item"><img src="./assets/fitnes_images/4.jpg" class="gallery-img" alt=""></li>
-            <li class="scrollbar-item"><img src="./assets/fitnes_images/5.jpg" class="gallery-img" alt=""></li>
-            <li class="scrollbar-item"><img src="./assets/fitnes_images/6.jpg" class="gallery-img" alt=""></li>
-            <li class="scrollbar-item"><img src="./assets/fitnes_images/8.jpg" class="gallery-img" alt=""></li>
-            <li class="scrollbar-item"><img src="./assets/fitnes_images/9.jpg" class="gallery-img" alt=""></li>
-            <li class="scrollbar-item"><img src="./assets/fitnes_images/10.jpg" class="gallery-img" alt=""></li>
-            <li class="scrollbar-item"><img src="./assets/fitnes_images/11.jpg" class="gallery-img" alt=""></li>
-            <li class="scrollbar-item"><img src="./assets/fitnes_images/12.jpg" class="gallery-img" alt=""></li>
-            <li class="scrollbar-item"><img src="./assets/fitnes_images/13.jpg" class="gallery-img" alt=""></li>
-            <li class="scrollbar-item"><img src="./assets/fitnes_images/14.jpg" class="gallery-img" alt=""></li>
-            <li class="scrollbar-item"><img src="./assets/fitnes_images/15.jpg" class="gallery-img" alt=""></li>
-            <li class="scrollbar-item"><img src="./assets/fitnes_images/16.jpg" class="gallery-img" alt=""></li>
-            <li class="scrollbar-item"><img src="./assets/fitnes_images/17.jpg" class="gallery-img" alt=""></li>
-            <li class="scrollbar-item"><img src="./assets/fitnes_images/18.jpg" class="gallery-img" alt=""></li>
-            <li class="scrollbar-item"><img src="./assets/fitnes_images/19.jpg" class="gallery-img" alt=""></li>
-            <li class="scrollbar-item"><img src="./assets/fitnes_images/20.jpg" class="gallery-img" alt=""></li>
-            <li class="scrollbar-item"><img src="./assets/fitnes_images/21.jpg" class="gallery-img" alt=""></li>
-            <li class="scrollbar-item"><img src="./assets/fitnes_images/22.jpg" class="gallery-img" alt=""></li>
-            <li class="scrollbar-item"><img src="./assets/fitnes_images/23.jpg" class="gallery-img" alt=""></li>
-            <li class="scrollbar-item"><img src="./assets/fitnes_images/24.jpg" class="gallery-img" alt=""></li>
-            <li class="scrollbar-item"><img src="./assets/fitnes_images/25.jpg" class="gallery-img" alt=""></li>
-            <li class="scrollbar-item"><img src="./assets/fitnes_images/26.jpg" class="gallery-img" alt=""></li>
-          </ul>
-      
-        </div>
-      </section>
-<!-- #LOCATION -->
-<section class="section location" id="location" aria-label="location">
-  <div class="container">
-    <p class="section-subtitle">Локация</p>
-    <h2 class="h2 section-title text-center">Къде да ни намерите</h2>
-    <div class="hero-banner">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d23452.306190147017!2d23.246331938120214!3d42.71349654792016!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa9b2883b49963%3A0x75858dd482da9c91!2z0KTQuNGC0L3QtdGBINCm0LXQvdGC0YrRgCAiSXJvbiBBcmVuYSI!5e0!3m2!1sbg!2sbg!4v1763598748405!5m2!1sbg!2sbg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-  </div>
-</section>
-
-    
-
-
-    </article>
-  </main>
-
-  <!-- #FOOTER -->
-  <footer class="footer">
-    <div class="footer-top bg-dark has-bg-image" style="background-image: url('./assets/images/footer-bg.png')">
-      <div class="container">
-  
-        <div class="footer-grid">
-  
-          <!-- LEFT COLUMN -->
-          <div class="footer-left">
-            <a href="#" class="footer-logo-wrap">
-              <img src="./assets/images/logo1.png" class="footer-logo-light" alt="Iron Arena Logo">
-            </a>
-  
-            <p class="footer-text">
-              Вашият фитнес партньор за здраве и сила.
-            </p>
-  
-            <div class="footer-hours">
-              <ion-icon name="time-outline"></ion-icon>
-            
-              <div>
-                <p class="footer-brand-title">Понеделник – Петък</p>
-                <p>7:30 – 22:00</p>
-              </div>
-            
-              <div>
-                <p class="footer-brand-title">Събота – Неделя</p>
-                <p>10:00 – 20:00</p>
-              </div>
-            </div>
-          </div>
-  
-          <!-- RIGHT COLUMN -->
-          <div class="footer-right">
-  
-            <div class="footer-item">
-              <ion-icon name="location-outline"></ion-icon>
-              <address class="footer-link">ул. "Фитнес" №39, София</address>
-            </div>
-  
-            <div class="footer-item">
-              <ion-icon name="call-outline"></ion-icon>
-              <a href="tel:+359888123456" class="footer-link">+359 888 123 456</a>
-            </div>
-  
-            <div class="footer-item">
-              <ion-icon name="mail-outline"></ion-icon>
-              <a href="mailto:info@ironarena.bg" class="footer-link">info@ironarena.bg</a>
-            </div>
-  
-            <ul class="footer-socials">
-              <li><a href="https://www.facebook.com/FitnessIRONARENA?locale=bg_BG"><ion-icon name="logo-facebook"></ion-icon></a></li>
-              <li><a href="https://www.instagram.com/iron_arenafitness2021/"><ion-icon name="logo-instagram"></ion-icon></a></li>
+            <ul class="class-list has-scrollbar">
+              <li class="scrollbar-item">
+                <div class="class-card">
+                  <figure
+                    class="card-banner img-holder"
+                    style="--width: 416; --height: 240"
+                  >
+                    <img
+                      src="./assets/images/class-1.jpg"
+                      width="416"
+                      height="240"
+                      loading="lazy"
+                      alt="Оферта 1"
+                      class="img-cover"
+                    />
+                  </figure>
+                  <div class="card-content">
+                    <h3 class="h3 card-title">Абонамент 1 месец</h3>
+                    <p class="card-text">
+                      Достъп до всички фитнес уреди и групови тренировки за 1
+                      месец.
+                    </p>
+                    <p class="card-text"><strong>Цена:</strong> 80 лв.</p>
+                  </div>
+                </div>
+              </li>
+              <li class="scrollbar-item">
+                <div class="class-card">
+                  <figure
+                    class="card-banner img-holder"
+                    style="--width: 416; --height: 240"
+                  >
+                    <img
+                      src="./assets/images/class-2.jpg"
+                      width="416"
+                      height="240"
+                      loading="lazy"
+                      alt="Оферта 2"
+                      class="img-cover"
+                    />
+                  </figure>
+                  <div class="card-content">
+                    <h3 class="h3 card-title">Абонамент 3 месеца</h3>
+                    <p class="card-text">
+                      Комплексна програма с треньор и достъп до всички класове.
+                    </p>
+                    <p class="card-text"><strong>Цена:</strong> 220 лв.</p>
+                  </div>
+                </div>
+              </li>
             </ul>
-  
           </div>
-  
+        </section>
+
+        <!-- #REVIEWS -->
+        <section class="section reviews" id="reviews" aria-label="reviews">
+          <div class="container">
+            <p class="section-subtitle">Клиентски мнения</p>
+            <h2 class="h2 section-title text-start">Ревюта</h2>
+            <!-- Reviews Summary --><a
+              href="https://www.google.com/maps/place/%D0%A4%D0%B8%D1%82%D0%BD%D0%B5%D1%81+%D0%A6%D0%B5%D0%BD%D1%82%D1%8A%D1%80+%22Iron+Arena%22/@42.7188487,23.2408991,16.16z/data=!4m6!3m5!1s0x40aa9b2883b49963:0x75858dd482da9c91!8m2!3d42.7167608!4d23.2440064!16s%2Fg%2F11h1jt6bq4?entry=ttu&g_ep=EgoyMDI1MTExNy4wIKXMDSoASAFQAw%3D%3D"
+              class="reviews-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div class="reviews-summary">
+                <div class="reviews-stars">
+                  <span class="star">★</span>
+                  <span class="star">★</span>
+                  <span class="star">★</span>
+                  <span class="star">★</span>
+                  <span class="star half">★</span>
+                </div>
+
+                <div class="reviews-info">
+                  <p class="avg-rating">4.8 от 5</p>
+                  <p class="total-reviews">Базирано на 64 ревюта</p>
+                </div>
+              </div>
+            </a>
+            <ul class="blog-list has-scrollbar">
+              <li class="scrollbar-item">
+                <div class="blog-card">
+                  <div class="card-content">
+                    <p class="card-text">
+                      „Малка квартална зала с всичко необходимо за здрава
+                      тренировка. Персоналът и хората са готини, никога няма
+                      навалица. Голям плюс за прозорците и свежия въздух, което
+                      в много други зали липсва 👍 :)…“
+                    </p>
+                    <p class="card-text"><strong>- Y D</strong></p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="scrollbar-item">
+                <div class="blog-card">
+                  <div class="card-content">
+                    <p class="card-text">
+                      „Супер фитнес! Малка и приятна зала, която е добре
+                      поддържана. Има всякакви уреди нужни за една тренировка.
+                      Персоналът е отличен и цените са перфектни. Силно
+                      препоръчвам!“
+                    </p>
+                    <p class="card-text"><strong>- Ivaka</strong></p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="scrollbar-item">
+                <div class="blog-card">
+                  <div class="card-content">
+                    <p class="card-text">
+                      „Много добре селектиран бар с добавки и инструкторката е
+                      про“
+                    </p>
+                    <p class="card-text"><strong>- Ivo Mladhzov</strong></p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="scrollbar-item">
+                <div class="blog-card">
+                  <div class="card-content">
+                    <p class="card-text">
+                      „Малка зала, но поддържана. Персоналът е много готин!“
+                    </p>
+                    <p class="card-text"><strong>- Lia Georgieva</strong></p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- #PRICING -->
+        <section class="section pricing" id="pricing" aria-label="pricing">
+          <div class="container">
+            <p class="section-subtitle">Фитнес</p>
+            <h2 class="h2 section-title text-start">Цени на абонаментите</h2>
+
+            <ul class="pricing-grid">
+              <li>
+                <div class="class-card">
+                  <div class="card-content">
+                    <h3 class="h3 card-title">Месечен абонамент</h3>
+                    <p class="card-text">80 лв.</p>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="class-card">
+                  <div class="card-content">
+                    <h3 class="h3 card-title">3 месеца</h3>
+                    <p class="card-text">220 лв.</p>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="class-card">
+                  <div class="card-content">
+                    <h3 class="h3 card-title">6 месеца</h3>
+                    <p class="card-text">400 лв.</p>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="class-card">
+                  <div class="card-content">
+                    <h3 class="h3 card-title">12 месеца</h3>
+                    <p class="card-text">750 лв.</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section
+          class="section pricing"
+          id="massage-pricing"
+          aria-label="massage pricing"
+        >
+          <div class="container">
+            <p class="section-subtitle">Масажи</p>
+            <h2 class="h2 section-title text-start">Ценоразпис на масажи</h2>
+
+            <ul class="pricing-grid">
+              <li>
+                <div class="class-card">
+                  <div class="card-content">
+                    <h3 class="h3 card-title">Масаж на лице и скалп</h3>
+                    <p class="card-text">40 мин / 50 лв. / €25,57</p>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="class-card">
+                  <div class="card-content">
+                    <h3 class="h3 card-title">Терапия с вендузи</h3>
+                    <p class="card-text">30 мин / 45 лв. / €23,01</p>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="class-card">
+                  <div class="card-content">
+                    <h3 class="h3 card-title">Класически масаж</h3>
+                    <p class="card-text">30 мин / 60 лв. / €30,68</p>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="class-card">
+                  <div class="card-content">
+                    <h3 class="h3 card-title">Класически масаж</h3>
+                    <p class="card-text">60 мин / 80 лв. / €40,91</p>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="class-card">
+                  <div class="card-content">
+                    <h3 class="h3 card-title">Релаксиращ масаж</h3>
+                    <p class="card-text">30 мин / 60 лв. / €30,68</p>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="class-card">
+                  <div class="card-content">
+                    <h3 class="h3 card-title">Релаксиращ масаж</h3>
+                    <p class="card-text">60 мин / 80 лв. / €40,91</p>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="class-card">
+                  <div class="card-content">
+                    <h3 class="h3 card-title">Лечебен масаж</h3>
+                    <p class="card-text">30 мин / 60 лв. / €30,68</p>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="class-card">
+                  <div class="card-content">
+                    <h3 class="h3 card-title">Лечебен масаж</h3>
+                    <p class="card-text">60 мин / 80 лв. / €40,91</p>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="class-card">
+                  <div class="card-content">
+                    <h3 class="h3 card-title">Дълбокотъканен масаж</h3>
+                    <p class="card-text">30 мин / 65 лв. / €33,24</p>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="class-card">
+                  <div class="card-content">
+                    <h3 class="h3 card-title">Дълбокотъканен масаж</h3>
+                    <p class="card-text">60 мин / 90 лв. / €46,02</p>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="class-card">
+                  <div class="card-content">
+                    <h3 class="h3 card-title">Комбинирана терапия</h3>
+                    <p class="card-text">60 мин / 80 лв. / €40,91</p>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="class-card">
+                  <div class="card-content">
+                    <h3 class="h3 card-title">Антицелулитен масаж</h3>
+                    <p class="card-text">40 мин / 60 лв. / €30,68</p>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="class-card">
+                  <div class="card-content">
+                    <h3 class="h3 card-title">Вендузи към масаж</h3>
+                    <p class="card-text">20 лв. / €10,23</p>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="class-card">
+                  <div class="card-content">
+                    <h3 class="h3 card-title">Масаж на ходила</h3>
+                    <p class="card-text">20 мин / 40 лв. / €20,45</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+
+            <h3 class="h3 text-start" style="margin-top: 40px">Запази час</h3>
+            <div class="massage-call-buttons">
+              <a href="tel:+359892911386" class="btn btn-primary"
+                >📞 +359 892 911 386</a
+              >
+              <a href="tel:+359878516689" class="btn btn-primary"
+                >📞 +359 878 516 689</a
+              >
+            </div>
+          </div>
+        </section>
+
+        <!-- #PARTNERS -->
+        <section
+          class="section partners"
+          id="partners"
+          aria-label="partners"
+          style="background-image: url('./assets/images/footer-bg.png')"
+        >
+          <div class="container">
+            <p class="section-subtitle">Партньори</p>
+            <h2 class="h2 section-title text-start">Тренирайте с картата си</h2>
+
+            <div class="partners-grid">
+              <div class="partner-card">
+                <div class="partner-logo">
+                  <img
+                    src="./assets/images/coolfit-logo.png"
+                    width="200"
+                    alt="CoolFit Logo"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+              <div class="partner-card">
+                <div class="partner-logo">
+                  <img
+                    src="./assets/images/multisport-logo.png"
+                    width="200"
+                    alt="MultiSport"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- #GALLERY -->
+        <section class="section gallery" id="gallery" aria-label="gallery">
+          <div class="container">
+            <p class="section-subtitle">Галерия</p>
+            <h2 class="h2 section-title text-start">Нашата зала</h2>
+
+            <ul class="gallery-carousel has-scrollbar">
+              <li class="scrollbar-item">
+                <img
+                  src="./assets/fitnes_images/1.jpg"
+                  class="gallery-img"
+                  alt=""
+                />
+              </li>
+              <li class="scrollbar-item">
+                <img
+                  src="./assets/fitnes_images/2.jpg"
+                  class="gallery-img"
+                  alt=""
+                />
+              </li>
+              <li class="scrollbar-item">
+                <img
+                  src="./assets/fitnes_images/3.jpg"
+                  class="gallery-img"
+                  alt=""
+                />
+              </li>
+              <li class="scrollbar-item">
+                <img
+                  src="./assets/fitnes_images/4.jpg"
+                  class="gallery-img"
+                  alt=""
+                />
+              </li>
+              <li class="scrollbar-item">
+                <img
+                  src="./assets/fitnes_images/5.jpg"
+                  class="gallery-img"
+                  alt=""
+                />
+              </li>
+              <li class="scrollbar-item">
+                <img
+                  src="./assets/fitnes_images/6.jpg"
+                  class="gallery-img"
+                  alt=""
+                />
+              </li>
+              <li class="scrollbar-item">
+                <img
+                  src="./assets/fitnes_images/8.jpg"
+                  class="gallery-img"
+                  alt=""
+                />
+              </li>
+              <li class="scrollbar-item">
+                <img
+                  src="./assets/fitnes_images/9.jpg"
+                  class="gallery-img"
+                  alt=""
+                />
+              </li>
+              <li class="scrollbar-item">
+                <img
+                  src="./assets/fitnes_images/10.jpg"
+                  class="gallery-img"
+                  alt=""
+                />
+              </li>
+              <li class="scrollbar-item">
+                <img
+                  src="./assets/fitnes_images/11.jpg"
+                  class="gallery-img"
+                  alt=""
+                />
+              </li>
+              <li class="scrollbar-item">
+                <img
+                  src="./assets/fitnes_images/12.jpg"
+                  class="gallery-img"
+                  alt=""
+                />
+              </li>
+              <li class="scrollbar-item">
+                <img
+                  src="./assets/fitnes_images/13.jpg"
+                  class="gallery-img"
+                  alt=""
+                />
+              </li>
+              <li class="scrollbar-item">
+                <img
+                  src="./assets/fitnes_images/14.jpg"
+                  class="gallery-img"
+                  alt=""
+                />
+              </li>
+              <li class="scrollbar-item">
+                <img
+                  src="./assets/fitnes_images/15.jpg"
+                  class="gallery-img"
+                  alt=""
+                />
+              </li>
+              <li class="scrollbar-item">
+                <img
+                  src="./assets/fitnes_images/16.jpg"
+                  class="gallery-img"
+                  alt=""
+                />
+              </li>
+              <li class="scrollbar-item">
+                <img
+                  src="./assets/fitnes_images/17.jpg"
+                  class="gallery-img"
+                  alt=""
+                />
+              </li>
+              <li class="scrollbar-item">
+                <img
+                  src="./assets/fitnes_images/18.jpg"
+                  class="gallery-img"
+                  alt=""
+                />
+              </li>
+              <li class="scrollbar-item">
+                <img
+                  src="./assets/fitnes_images/19.jpg"
+                  class="gallery-img"
+                  alt=""
+                />
+              </li>
+              <li class="scrollbar-item">
+                <img
+                  src="./assets/fitnes_images/20.jpg"
+                  class="gallery-img"
+                  alt=""
+                />
+              </li>
+              <li class="scrollbar-item">
+                <img
+                  src="./assets/fitnes_images/21.jpg"
+                  class="gallery-img"
+                  alt=""
+                />
+              </li>
+              <li class="scrollbar-item">
+                <img
+                  src="./assets/fitnes_images/22.jpg"
+                  class="gallery-img"
+                  alt=""
+                />
+              </li>
+              <li class="scrollbar-item">
+                <img
+                  src="./assets/fitnes_images/23.jpg"
+                  class="gallery-img"
+                  alt=""
+                />
+              </li>
+              <li class="scrollbar-item">
+                <img
+                  src="./assets/fitnes_images/24.jpg"
+                  class="gallery-img"
+                  alt=""
+                />
+              </li>
+              <li class="scrollbar-item">
+                <img
+                  src="./assets/fitnes_images/25.jpg"
+                  class="gallery-img"
+                  alt=""
+                />
+              </li>
+              <li class="scrollbar-item">
+                <img
+                  src="./assets/fitnes_images/26.jpg"
+                  class="gallery-img"
+                  alt=""
+                />
+              </li>
+            </ul>
+          </div>
+        </section>
+        <!-- #LOCATION -->
+        <section class="section location" id="location" aria-label="location">
+          <div class="container">
+            <p class="section-subtitle">Локация</p>
+            <h2 class="h2 section-title text-start">Къде да ни намерите</h2>
+            <div class="hero-banner">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d23452.306190147017!2d23.246331938120214!3d42.71349654792016!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa9b2883b49963%3A0x75858dd482da9c91!2z0KTQuNGC0L3QtdGBINCm0LXQvdGC0YrRgCAiSXJvbiBBcmVuYSI!5e0!3m2!1sbg!2sbg!4v1763598748405!5m2!1sbg!2sbg"
+                width="600"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+        </section>
+      </article>
+    </main>
+
+    <!-- #FOOTER -->
+    <footer class="footer">
+      <div
+        class="footer-top bg-dark has-bg-image"
+        style="background-image: url('./assets/images/footer-bg.png')"
+      >
+        <div class="container">
+          <div class="footer-grid">
+            <!-- LEFT COLUMN -->
+            <div class="footer-left">
+              <a href="#" class="footer-logo-wrap">
+                <img
+                  src="./assets/images/logo1.png"
+                  class="footer-logo-light"
+                  alt="Iron Arena Logo"
+                />
+              </a>
+
+              <p class="footer-text">
+                Вашият фитнес партньор за здраве и сила.
+              </p>
+
+              <div class="footer-hours">
+                <ion-icon name="time-outline"></ion-icon>
+
+                <div>
+                  <p class="footer-brand-title">Понеделник – Петък</p>
+                  <p>7:30 – 22:00</p>
+                </div>
+
+                <div>
+                  <p class="footer-brand-title">Събота – Неделя</p>
+                  <p>10:00 – 20:00</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- RIGHT COLUMN -->
+            <div class="footer-right">
+              <div class="footer-item">
+                <ion-icon name="location-outline"></ion-icon>
+                <address class="footer-link">ул. "Фитнес" №39, София</address>
+              </div>
+
+              <div class="footer-item">
+                <ion-icon name="call-outline"></ion-icon>
+                <a href="tel:+359888123456" class="footer-link"
+                  >+359 888 123 456</a
+                >
+              </div>
+
+              <div class="footer-item">
+                <ion-icon name="mail-outline"></ion-icon>
+                <a href="mailto:info@ironarena.bg" class="footer-link"
+                  >info@ironarena.bg</a
+                >
+              </div>
+
+              <ul class="footer-socials">
+                <li>
+                  <a
+                    href="https://www.facebook.com/FitnessIRONARENA?locale=bg_BG"
+                    ><ion-icon name="logo-facebook"></ion-icon
+                  ></a>
+                </li>
+                <li>
+                  <a href="https://www.instagram.com/iron_arenafitness2021/"
+                    ><ion-icon name="logo-instagram"></ion-icon
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
-  
       </div>
-    </div>
-  
-    <!-- COPYRIGHT -->
-    <div class="footer-bottom">
-      <div class="container footer-bottom-inner">
-        <p id="copyright"></p>
+
+      <!-- COPYRIGHT -->
+      <div class="footer-bottom">
+        <div class="container footer-bottom-inner">
+          <p id="copyright"></p>
+        </div>
       </div>
-    </div>
-  
-    <a href="#top" class="back-top-btn" aria-label="обратно нагоре" data-back-top-btn>
-      <ion-icon name="caret-up-sharp"></ion-icon>
+
+      <a
+        href="#top"
+        class="back-top-btn"
+        aria-label="обратно нагоре"
+        data-back-top-btn
+      >
+        <ion-icon name="caret-up-sharp"></ion-icon>
+      </a>
+    </footer>
+    <!-- #BACK TO TOP -->
+    <a
+      href="#top"
+      class="back-top-btn"
+      aria-label="обратно нагоре"
+      data-back-top-btn
+    >
+      <ion-icon name="caret-up-sharp" aria-hidden="true"></ion-icon>
     </a>
-  
-  </footer>
-  <!-- #BACK TO TOP -->
-  <a href="#top" class="back-top-btn" aria-label="обратно нагоре" data-back-top-btn>
-    <ion-icon name="caret-up-sharp" aria-hidden="true"></ion-icon>
-  </a>
 
-  <!-- custom js link -->
-  <script src="./assets/js/script.js" defer></script>
+    <!-- custom js link -->
+    <script src="./assets/js/script.js" defer></script>
 
-  <!-- ionicon link -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <!-- ionicon link -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+  </body>
+</html>
