@@ -2469,3 +2469,175 @@ footer .container {
 #sinceseven:hover {
   color: var(--coquelicot); /* optional hover effect */
 }
+/* current desktop/tablet behavior (keep full image) */
+.offers-carousel .img-holder {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.offers-carousel .img-holder img.img-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* full image on larger screens */
+  object-position: center;
+}
+
+/* 🔥 MOBILE: fill top & bottom, no gaps */
+@media (max-width: 768px) {
+  .offers-carousel .img-holder {
+    max-height: 210px; /* tweak if you want taller/shorter */
+  }
+
+  .offers-carousel .img-holder img.img-cover {
+    object-fit: cover !important; /* fill box, no top/bottom gap */
+    object-position: center;
+  }
+}
+
+/* 📲 TABLET (769px–1024px): light cropping, more height */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .offers-carousel .img-holder {
+    max-height: 320px; /* ↑ taller for tablets */
+  }
+
+  .offers-carousel .img-holder img.img-cover {
+    object-fit: cover; /* crop slightly but show more image */
+    object-position: center;
+  }
+}
+
+/* ==========================================
+   FORCE OFFERS TO SHOW ONE FULL CARD CENTERED
+   — ONLY ON MOBILE & TABLET
+   ========================================== */
+@media (max-width: 1024px) {
+  /* Remove all extra spacing around the slider */
+  .offers-carousel .class-list {
+    padding: 0 !important;
+    margin: 0 auto !important;
+    width: 100% !important;
+
+    display: flex !important;
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory;
+  }
+
+  /* EXACTLY 1 CARD PER VIEW on small screens */
+  .offers-carousel .scrollbar-item {
+    flex: 0 0 100%;
+    min-width: 100%;
+    max-width: 100%;
+    scroll-snap-align: center;
+  }
+
+  .offers-carousel .class-card {
+    width: 100%;
+  }
+
+  /* Center carousel + arrows */
+  .offers-carousel {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .offers-carousel .carousel-btn.left {
+    left: 20px;
+  }
+
+  .offers-carousel .carousel-btn.right {
+    right: 20px;
+  }
+}
+
+/* ==========================================
+   DESKTOP — MAKE 2 OFFERS WIDER & PROPORTIONAL
+   ========================================== */
+@media (min-width: 1025px) {
+  .offers-carousel .class-list {
+    justify-content: center;
+    gap: 40px !important; /* space between the two cards */
+    padding: 0 20px !important; /* optional: small horizontal breathing */
+  }
+
+  .offers-carousel .scrollbar-item {
+    flex: 0 0 47% !important; /* wider than 50% */
+    min-width: 47% !important;
+    max-width: 47% !important;
+  }
+
+  .offers-carousel .class-card {
+    width: 100%;
+  }
+}
+/* ==========================================
+   DESKTOP — MAKE 2 OFFERS WIDER LIKE REVIEWS
+   ========================================== */
+@media (min-width: 1025px) {
+  .offers-carousel {
+    max-width: 1200px; /* same feeling as reviews section */
+    margin: 0 auto;
+  }
+
+  .offers-carousel .class-list {
+    display: flex;
+    justify-content: center;
+    gap: 30px !important; /* space between cards */
+  }
+
+  .offers-carousel .scrollbar-item {
+    flex: 0 0 48.5% !important; /* << wider cards */
+    min-width: 48.5% !important;
+    max-width: 48.5% !important;
+  }
+
+  .offers-carousel .class-card {
+    width: 100%;
+  }
+}
+/* ==========================================
+   DESKTOP — MAKE 2 OFFERS WIDER LIKE REVIEWS
+   ========================================== */
+@media (min-width: 1025px) {
+  .offers-carousel {
+    max-width: 1200px; /* same feeling as reviews section */
+    margin: 0 auto;
+  }
+
+  .offers-carousel .class-list {
+    display: flex;
+    justify-content: center;
+    gap: 30px !important; /* space between cards */
+  }
+
+  .offers-carousel .scrollbar-item {
+    flex: 0 0 48.5% !important; /* << wider cards */
+    min-width: 48.5% !important;
+    max-width: 48.5% !important;
+  }
+
+  .offers-carousel .class-card {
+    width: 100%;
+  }
+}
+.offers,
+.offers-carousel {
+  padding-top: 20px !important;
+}
+/* Desktop — widen both offer cards */
+@media (min-width: 1025px) {
+  .offers-carousel .scrollbar-item {
+    flex: 0 0 48% !important;
+    min-width: 48% !important;
+    max-width: 48% !important;
+  }
+
+  .offers-carousel .class-list {
+    gap: 30px !important; /* keep nice spacing between the two cards */
+  }
+}
