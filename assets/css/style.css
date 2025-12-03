@@ -2648,6 +2648,22 @@ footer .container {
   margin-top: 12px;
   width: 100%;
 }
+/* FORCE styling on mobile because other rules override it */
+@media (max-width: 480px) {
+  .offer-meta {
+    font-size: 1.6rem !important;
+    font-weight: 700 !important;
+    color: var(--coquelicot) !important;
+    margin: 0 !important;
+    white-space: normal !important;
+  }
+
+  .price-exp-row {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 4px !important;
+  }
+}
 
 /* Unified styling for price + expiration */
 .offer-meta {
@@ -2656,4 +2672,3 @@ footer .container {
   color: var(--coquelicot); /* same red color */
   margin: 0;
   white-space: nowrap;
-}
