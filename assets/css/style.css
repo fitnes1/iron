@@ -2425,3 +2425,13 @@ footer .container {
     min-width: calc(100% - 14px) !important;
   }
 }
+#sinceseven {
+  color: #ccc; /* same as footer text */
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 16px; /* match your footer text size */
+}
+
+#sinceseven:hover {
+  color: var(--coquelicot); /* optional hover effect */
+}
