@@ -58,17 +58,21 @@ if (copyrightElem) {
   copyrightElem.textContent = `© ${year} Iron Arena. Всички права запазени.`;
   copyrightElem.style.whiteSpace = "nowrap";
 }
-
 document.querySelectorAll(".carousel-wrapper").forEach((wrapper) => {
   const list = wrapper.querySelector(".has-scrollbar");
   const btnLeft = wrapper.querySelector("[data-carousel-left]");
   const btnRight = wrapper.querySelector("[data-carousel-right]");
 
+  if (!btnLeft || !btnRight || !list) return;
+
+  const item = list.querySelector(".scrollbar-item");
+  const itemWidth = item ? item.offsetWidth : 300;
+
   btnLeft.addEventListener("click", () => {
-    list.scrollBy({ left: -300, behavior: "smooth" });
+    list.scrollBy({ left: -itemWidth, behavior: "smooth" });
   });
 
   btnRight.addEventListener("click", () => {
-    list.scrollBy({ left: 300, behavior: "smooth" });
+    list.scrollBy({ left: itemWidth, behavior: "smooth" });
   });
 });

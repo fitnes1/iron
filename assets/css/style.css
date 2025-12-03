@@ -2274,3 +2274,41 @@ footer .container {
   display: flex;
   align-items: center;
 }
+@media (max-width: 1024px) {
+  /* Each review item takes full width */
+  .blog-list .scrollbar-item {
+    min-width: 100%;
+    max-width: 100%;
+    flex: 0 0 100%;
+    scroll-snap-align: center;
+    padding: 0 16px; /* prevents cutting edges */
+    box-sizing: border-box;
+  }
+
+  /* Ensures the review card fits fully inside */
+  .blog-card {
+    width: 100%;
+  }
+
+  .blog-card .card-content {
+    padding: 20px;
+  }
+
+  /* Proper horizontal scrolling */
+  .blog-list {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    gap: 0;
+  }
+
+  /* Fix arrow positioning on mobile/tablet */
+  .carousel-btn.left {
+    left: 0;
+  }
+
+  .carousel-btn.right {
+    right: 0;
+  }
+}
