@@ -2369,3 +2369,59 @@ footer .container {
 .offers-carousel .carousel-btn.right {
   right: 20px !important;
 }
+/* ==========================================
+   GALLERY — SHOW EXACTLY 1 FULL IMAGE PER VIEW
+   ========================================== */
+
+.gallery-carousel {
+  display: flex !important;
+  overflow-x: auto !important;
+  scroll-snap-type: x mandatory !important;
+  gap: 0 !important;
+  padding: 0 !important;
+}
+
+.gallery-carousel .scrollbar-item {
+  flex: 0 0 100% !important;
+  min-width: 100% !important;
+  max-width: 100% !important;
+  scroll-snap-align: center !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery-carousel .gallery-img {
+  width: 100% !important;
+  height: 320px !important; /* adjust: 260, 300, 350 */
+  object-fit: cover !important;
+  border-radius: 10px;
+}
+
+/* OPTIONAL: Make images taller on desktop */
+@media (min-width: 992px) {
+  .gallery-carousel .gallery-img {
+    height: 400px !important;
+  }
+}
+
+/* OPTIONAL: Increase height on large screens */
+@media (min-width: 1400px) {
+  .gallery-carousel .gallery-img {
+    height: 450px !important;
+  }
+}
+/* ================================
+   GALLERY — spacing for mobile/tablet
+   ================================ */
+@media (max-width: 1024px) {
+  .gallery-carousel {
+    gap: 14px !important; /* small separation */
+    padding-inline: 8px; /* avoid photo touching screen edges */
+  }
+
+  .gallery-carousel .scrollbar-item {
+    flex: 0 0 calc(100% - 14px) !important; /* adjust snap width */
+    min-width: calc(100% - 14px) !important;
+  }
+}
