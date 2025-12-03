@@ -2641,3 +2641,19 @@ footer .container {
     gap: 30px !important; /* keep nice spacing between the two cards */
   }
 }
+.price-exp-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+  width: 100%;
+}
+
+/* Unified styling for price + expiration */
+.offer-meta {
+  font-size: 1.6rem;
+  font-weight: 700; /* same bold style */
+  color: var(--coquelicot); /* same red color */
+  margin: 0;
+  white-space: nowrap;
+}
