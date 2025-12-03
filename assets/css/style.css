@@ -2673,3 +2673,7 @@ footer .container {
   margin: 0;
   white-space: nowrap;
 }
+/* Add spacing between offer cards and scrollbar */
+.offers-carousel .class-list {
+  padding-bottom: 30px !important; /* adjust 20–40px as you prefer */
+}
