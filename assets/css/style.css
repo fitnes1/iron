@@ -2312,3 +2312,60 @@ footer .container {
     right: 0;
   }
 }
+/* Show exactly ONE offer card per view on mobile/tablets */
+@media (max-width: 1024px) {
+  .offers-carousel .scrollbar-item {
+    min-width: 100% !important;
+    max-width: 100% !important;
+    scroll-snap-align: center;
+  }
+
+  .offers-carousel .class-list {
+    scroll-snap-type: x mandatory;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+/* ==========================================
+   FORCE OFFERS TO SHOW ONE FULL CARD CENTERED
+   ========================================== */
+
+/* Remove all extra spacing around the slider */
+.offers-carousel .class-list {
+  padding: 0 !important;
+  margin: 0 auto !important;
+  width: 100% !important;
+
+  display: flex !important;
+  overflow-x: auto !important;
+  scroll-snap-type: x mandatory;
+}
+
+/* EXACTLY 1 CARD PER VIEW */
+.offers-carousel .scrollbar-item {
+  flex: 0 0 100% !important;
+  min-width: 100% !important;
+  max-width: 100% !important;
+  scroll-snap-align: center;
+}
+
+/* Make sure the card fills the line */
+.offers-carousel .class-card {
+  width: 100% !important;
+}
+
+/* Center the entire carousel */
+.offers-carousel {
+  max-width: 900px;
+  margin: 0 auto !important;
+  position: relative;
+}
+
+/* Fix arrow distance */
+.offers-carousel .carousel-btn.left {
+  left: 20px !important;
+}
+
+.offers-carousel .carousel-btn.right {
+  right: 20px !important;
+}
